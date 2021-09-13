@@ -1,0 +1,71 @@
+
+
+.flexcontainer {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+}
+
+.item{
+    
+    width: 22%;
+    
+    border: 0.2px solid gray;
+    border-radius: 5px;
+    
+    
+}
+
+.itemheading {
+    background-color: green;
+    height: 50px;
+    border-radius: 5px;
+    margin: 5px
+    
+    
+}
+
+h4 {
+    
+    text-align: center;
+  
+}
+
+.carditem {
+    background-color: rgb(58, 192, 114);
+    width: 90%;
+    height: 262px;
+    border: 0.1px solid black;
+    align-content: space-around;
+    margin-left: 14px;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 6px;
+}
+
+.card{
+    height: 100%;
+}
+
+.todo {
+    background-color: rgb(50, 140, 182);
+}
+
+.inprog{
+    background-color: rgb(27, 163, 187);
+}
+
+.rev{
+    background-color: rgb(51, 185, 129);
+}
+
+.done{
+    background-color: rgb(78, 192, 58);
+}
+@media (max-width: 900px) {
+    .item {
+      flex: 100%;
+    }
+  }

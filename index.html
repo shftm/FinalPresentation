@@ -7,14 +7,15 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-
-    <title>Hello, world!</title>
+    <!-- our css -->
+    <link href="./styles.css" rel="stylesheet">
+    <title>Shumaila and Shifnas</title>
   </head>
   <body>
     <h1>Task</h1>
 
     <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createTaskModal">
   Add New Task
 </button>
 
@@ -31,7 +32,7 @@
         <form>
           <div class="form-group">
             <label for="exampleFormControlInput1">Task Name</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Type your task name here">
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Type your task name here">
           </div>
           <div class="form-group">
             <label for="exampleFormControlSelect1">Assign To</label>
@@ -71,63 +72,25 @@
     </div>
   </div>
 </div>
+<br> <br> <br> <br>
+
+
+
+
+
 
 <!-- flex starts here -->
-<div class="container" >
- 
-</div>
-
-<!-- flex columns start here -->
-
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <!-- first column card -->
-      <!-- cards start here -->
- <div class="card" style="width: 18rem;">
-      
-  <div class="card-body">
-    <h5 class="card-title">Task Name</h5>
-    <p class="card-text">Description of the task comes here</p>
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">Assigned to Ann</li>
-    <li class="list-group-item">Due Date comes here</li>
-    
-  </ul>
-  <div class="card-body">
-      <button type="button">Edit</button>
-      <button type="button">Delete</button>
-  </div>
-<!-- first col second card starts -->
-
-<!-- cards start here -->
-<div class="card" style="width: 18rem;">
-      
-  <div class="card-body">
-    <h5 class="card-title">Task Name</h5>
-    <p class="card-text">Description of the task comes here</p>
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">Assigned to Heidi</li>
-    <li class="list-group-item">Due Date comes here</li>
-    
-  </ul>
-  <div class="card-body">
-      <button type="button">Edit</button>
-      <button type="button">Delete</button>
-  </div>
-</div>
-<!-- firt col second card ends -->
-
-  </div>
-      <!-- first column end -->
-    </div>
-    <!-- second column starts here -->
-    <div class="col">
-      <!-- second column first card start here -->
-       <!-- cards start here -->
-    <div class="card" style="width: 18rem;">
+<div class="flexcontainer">
+<div class="item"> 
+  <!-- To do flex Item starts -->
+   <div class="itemheading todo">
+     <h4 >To Do </h4>
+   </div>
+  
+  <!-- card one starts -->
+  <div class=carditem>
+       <!-- bootstrap card code starts -->
+       <div class="card" style="width: 100%;">
       
       <div class="card-body">
         <h5 class="card-title">Task Name</h5>
@@ -143,76 +106,177 @@
           <button type="button">Delete</button>
       </div>
     </div>
-
-      <!-- second column first card ends here -->
-      <!-- second col second card starts here -->
-        <!-- cards start here -->
-    <div class="card" style="width: 18rem;">
-      
-      <div class="card-body">
-        <h5 class="card-title">Task Name</h5>
-        <p class="card-text">Description of the task comes here</p>
-      </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">Assigned to Mic</li>
-        <li class="list-group-item">Due Date comes here</li>
-        
-      </ul>
-      <div class="card-body">
-          <button type="button">Edit</button>
-          <button type="button">Delete</button>
-      </div>
-    </div>
-
-      <!-- second col second card ens here -->
-    </div>
-    <!-- third col starts -->
-    <div class="col">
-      <!-- third col first card starts -->
-      <!-- cards start here -->
-    <div class="card" style="width: 18rem;">
-      
-      <div class="card-body">
-        <h5 class="card-title">Task Name</h5>
-        <p class="card-text">Description of the task comes here</p>
-      </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">Assigned to Shifnas</li>
-        <li class="list-group-item">Due Date comes here</li>
-        
-      </ul>
-      <div class="card-body">
-          <button type="button">Edit</button>
-          <button type="button">Delete</button>
-      </div>
-    </div>
-      <!-- third col first card ends -->
-    </div>
-    <!-- fourth col starts here -->
-    <div class="col">
-      <!-- first card of fourth col starts here -->
-
-      <!-- cards start here -->
-    <div class="card" style="width: 18rem;">
-      
-      <div class="card-body">
-        <h5 class="card-title">Task Name</h5>
-        <p class="card-text">Description of the task comes here</p>
-      </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">Assigned to Shumaila</li>
-        <li class="list-group-item">Due Date comes here</li>
-        
-      </ul>
-      <div class="card-body">
-          <button type="button">Edit</button>
-          <button type="button">Delete</button>
-      </div>
-    </div>
-      <!--  fourth col first card ends  -->
-    </div>
+       <!-- bootstrap card code ends -->
   </div>
+    <!-- card one ends -->
+ 
+  <!-- card two starts -->
+  <div class=carditem>
+      <!-- bootstrap card code starts -->
+      <div class="card" style="width: 100%;">
+      
+        <div class="card-body">
+          <h5 class="card-title">Task Name</h5>
+          <p class="card-text">Description of the task comes here</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Assigned to Lara</li>
+          <li class="list-group-item">Due Date comes here</li>
+          
+        </ul>
+        <div class="card-body">
+            <button type="button">Edit</button>
+            <button type="button">Delete</button>
+        </div>
+      </div>
+         <!-- bootstrap card code ends -->
+  </div>   
+  <!-- card two  ends -->
+  
+  <!-- card three starts -->
+  <div class=carditem>
+    <!-- bootstrap card code starts -->
+    <div class="card" style="width: 100%;">
+   
+   <div class="card-body">
+     <h5 class="card-title">Task Name</h5>
+     <p class="card-text">Description of the task comes here</p>
+   </div>
+   <ul class="list-group list-group-flush">
+     <li class="list-group-item">Assigned to Lara</li>
+     <li class="list-group-item">Due Date comes here</li>
+     
+   </ul>
+   <div class="card-body">
+       <button type="button">Edit</button>
+       <button type="button">Delete</button>
+   </div>
+ </div>
+    <!-- bootstrap card code ends -->
 </div>
+ <!-- card three ends -->
+  
+</div>
+<!-- To do flex Item ends -->
+
+<!-- In Progress flex Item starts -->
+<div class="item">
+  <div class="itemheading inprog">
+  <h4> In Progress </h4>
+</div>
+
+<!-- card one_prog starts -->
+<div class=carditem>
+  <!-- bootstrap card code starts -->
+  <div class="card" style="width: 100%;">
+ 
+ <div class="card-body">
+   <h5 class="card-title">Task Name</h5>
+   <p class="card-text">Description of the task comes here</p>
+ </div>
+ <ul class="list-group list-group-flush">
+   <li class="list-group-item">Assigned to Lara</li>
+   <li class="list-group-item">Due Date comes here</li>
+   
+ </ul>
+ <div class="card-body">
+     <button type="button">Edit</button>
+     <button type="button">Delete</button>
+ </div>
+</div>
+  <!-- bootstrap card code ends -->
+</div>
+<!-- card one_prog ends -->
+
+<!-- card two_prog starts -->
+<div class=carditem>
+  <!-- bootstrap card code starts -->
+  <div class="card" style="width: 100%;">
+ 
+ <div class="card-body">
+   <h5 class="card-title">Task Name</h5>
+   <p class="card-text">Description of the task comes here</p>
+ </div>
+ <ul class="list-group list-group-flush">
+   <li class="list-group-item">Assigned to Lara</li>
+   <li class="list-group-item">Due Date comes here</li>
+   
+ </ul>
+ <div class="card-body">
+     <button type="button">Edit</button>
+     <button type="button">Delete</button>
+ </div>
+</div>
+  <!-- bootstrap card code ends -->
+</div>
+<!-- card two_prog ends -->
+
+</div>
+<!-- In Progress flex Item ends -->
+
+<!-- Review flex Item starts -->
+<div class="item">
+  <div class="itemheading rev">
+  <h4>Review </h4>
+  </div>
+
+  <!-- card one_prog starts -->
+<div class=carditem>
+  <!-- bootstrap card code starts -->
+  <div class="card" style="width: 100%;">
+ 
+ <div class="card-body">
+   <h5 class="card-title">Task Name</h5>
+   <p class="card-text">Description of the task comes here</p>
+ </div>
+ <ul class="list-group list-group-flush">
+   <li class="list-group-item">Assigned to Lara</li>
+   <li class="list-group-item">Due Date comes here</li>
+   
+ </ul>
+ <div class="card-body">
+     <button type="button">Edit</button>
+     <button type="button">Delete</button>
+ </div>
+</div>
+  <!-- bootstrap card code ends -->
+</div>
+<!-- card one_prog ends -->
+
+</div> <!-- Review flex Item ends -->
+
+
+<div class="item"> <!-- Done flex Item starts -->
+  <div class="itemheading done">
+  <h4>Done </h4>
+</div>
+<!-- card one_prog starts -->
+<div class=carditem>
+  <!-- bootstrap card code starts -->
+  <div class="card" style="width: 100%;">
+ 
+ <div class="card-body">
+   <h5 class="card-title">Task Name</h5>
+   <p class="card-text">Description of the task comes here</p>
+ </div>
+ <ul class="list-group list-group-flush">
+   <li class="list-group-item">Assigned to Lara</li>
+   <li class="list-group-item">Due Date comes here</li>
+   
+ </ul>
+ <div class="card-body">
+     <button type="button">Edit</button>
+     <button type="button">Delete</button>
+ </div>
+</div>
+  <!-- bootstrap card code ends -->
+</div>
+<!-- card one_prog ends -->
+</div> <!-- done flex Item ends -->
+</div> <!-- flex ends here -->
+
+
+
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
