@@ -15,7 +15,7 @@
     <h1>Task</h1>
 
     <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createTaskModal">
   Add New Task
 </button>
 
@@ -35,8 +35,8 @@
             <input type="text" class="form-control" id="taskname" placeholder="Type your task name here">
           </div>
           <div class="form-group">
-            <label for="exampleFormControlSelect1">Assign To</label>
-            <select class="form-control" id="exampleFormControlSelect1">
+            <label for="assignTo">Assign To</label>
+            <select class="form-control" id="assignTo">
               <option>Person 1</option>
               <option>Person 2</option>
               <option>Person 3</option>
@@ -45,16 +45,16 @@
             </select>
           </div>
           <div class="form-group">
-            <label for="exampleFormControlInput1">Due Date</label>
-            <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="">
+            <label for="dueDate">Due Date</label>
+            <input type="date" class="form-control" id="dueDate" placeholder="">
           </div>
           <div class="form-group">
             <label for="description">Task Description</label>
             <textarea class="form-control" id="description" rows="3"></textarea>
           </div>
           <div class="form-group">
-            <label for="taskname">Status</label>
-            <select class="form-control" id="taskname">
+            <label for="status">Status</label>
+            <select class="form-control" id="status">
               <option>To Do</option>
               <option>In Progress</option>
               <option>Review</option>
@@ -62,7 +62,7 @@
               </select>
           </div>
         </form>
-        <!-- form ends here -->
+        <!-- form ends here -->s
         
       </div>
       <div class="modal-footer">
