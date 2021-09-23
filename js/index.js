@@ -1,3 +1,10 @@
+// Initialize a new TaskManager with currentId set to 0
+const taskinstance = new TaskManager(0);
+console.log(taskinstance);
+
+
+// Select the New Task Form
+const form = document.querySelector("#taskform");
 
 const Ttask = document.querySelector("#taskname");
 const Aasign = document.querySelector("#assignTo");
@@ -21,11 +28,18 @@ const error5 = document.querySelector("#error5");
 Cchange.addEventListener('click', validFormFieldInput);
 
 function validFormFieldInput() {
+
+    //prevent default action (doubt, what is event here??)
+    // event.preventDefault(); - event should be passed into the brackets (eg-"submit")
+
+  
     //Check if the Task Name input value is more than 5 characters.
     if(Ttask.value.length < 5){
         error1.innerHTML = "Enter a name with more than 5 charecters";
         error1.style.color = 'red';
-    } 
+        
+        
+    }
     else {
 
     }
@@ -33,10 +47,10 @@ function validFormFieldInput() {
     if (Aasign.value === "select an option" ){
         error2.innerHTML = "Select an option from the list";
         error2.style.color = 'red';
-    }   
+    }
     else {
 
-    }  
+    }
     //Check if the Task Due Date input value is not empty.
      if (Ddue.value === "" ){
         error3.innerHTML = "Select a date";
@@ -54,13 +68,46 @@ function validFormFieldInput() {
     else {
 
     }
-       
+
     //Check if the Task Status input value is not empty.
      if (Sstatus.value === "select an option") {
         error5.innerHTML = "Select an option";
         error5.style.color = 'red'
     }
     else{
-      
+        //if false focus to the input fields
+
+
+      //remove previous error message
+      error1.innerHTML = "";
+      error2.innerHTML = "";
+      error3.innerHTML = "";
+      error4.innerHTML = "";
+      error5.innerHTML = "";
+
     }
+    //call the method from the class
+    taskinstance.addnewTask(Ttask.value, Aasign.value, Ddue.value, Ddes.value,Sstatus.value)
+    console.log(taskinstance._tasks);
+    
+
+    //clearing all form field values after submission
+    let clearFields = () => {
+        Ttask.value = "";
+        Aasign.value = "";
+        Ddue.value = "";
+        Ddes.value = "";
+        Sstatus.value = "";
+    }
+   
+    //closing the modal after clicking
+    // var myModal = new bootstrap.Modal(document.getElementById('createTaskModal')); // after validation occurs and it is successful, you can now use the variable you defined to call a BootStrap method - this would be inside your successful if statement
+
+
+//     var myModal = new bootstrap.Modal(document.getElementById('createTaskModal')); // after validation occurs and it is successful, you can now use the variable you defined to call a BootStrap method - this would be inside your successful if statement
+//  myModal.hide();
+//     //  myModal.hide();
+
+
 };
+
