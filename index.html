@@ -79,7 +79,8 @@
       </div>
       <div class="modal-footer">
         <button type="button" id="closeb" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" id="savebtn" class="btn btn-primary">Save changes</button>
+         <button type="submit" id="savebtn" class="btn btn-primary">Submit</button> 
+        <!-- <button type="button" id="savebtn" class="btn btn-primary">Save changes</button> -->
       </div>
     </div>
   </div>
@@ -89,31 +90,28 @@
 
 <!-- flex starts here -->
 <div class="flexcontainer">
-<div class="item"> 
+<div class="item" > 
   <!-- To do flex Item starts -->
    <div class="itemheading todo">
      <h4 >To Do </h4>
    </div>
   
   <!-- card one starts -->
-  <div class=carditem>
+  <div class="carditem" id="taskstodo">
        <!-- bootstrap card code starts -->
        <div class="card" style="width: 100%;">
-      
-      <div class="card-body">
-        <h5 class="card-title">Task Name</h5>
-        <p class="card-text">Description of the task comes here</p>
+        <div class="card-header">
+          TaskName
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Assigned to</li>
+          <li class="list-group-item">duedate</li>
+        </ul>
+        <div class="card-body">
+           <p class="card-text">Description of the task comes here</p>
+           <h5 class="card-title" >status</h5>
+        </div>
       </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">Assigned to Lara</li>
-        <li class="list-group-item">Due Date comes here</li>
-        
-      </ul>
-      <div class="card-body">
-          <button type="button">Edit</button>
-          <button type="button">Delete</button>
-      </div>
-    </div>
        <!-- bootstrap card code ends -->
   </div>
     <!-- card one ends -->
