@@ -12,7 +12,7 @@
     <title>S&S</title>
   </head>
   <body>
-    <h1>Task</h1>
+    <h1>To Do List</h1>
 
     <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createTaskModal">
@@ -24,20 +24,22 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="ariaLabel">Modal title</h5>
+        <h5 class="modal-title" id="ariaLabel">Add New Task</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <!-- form starts here -->
         <form>
-          <div class="form-group">
+          <div class="form-group" id="taskform">
+            
+            <label for="taskname" name="tasksname" >Task Name</label>
             <span id="error1"> </span> <br>
-            <label for="taskname" >Task Name</label>
             <input type="text" class="form-control" id="taskname" placeholder="Type your task name here">
           </div>
           <div class="form-group">
-            <span id="error2" > </span><br>
+            
             <label for="assignTo" >Assign To</label>
+            <span id="error2"> </span><br>
             <select class="form-control" id="assignTo">
               <option id="opt1" disabled selected value="select an option"> select an option  </option>
               <option>Person 1</option>
@@ -48,18 +50,21 @@
             </select>
           </div>
           <div class="form-group">
-            <span id="error3" > </span><br>
+            
             <label for="dueDate" >Due Date</label>
+            <span id="error3" > </span><br>
             <input type="date" class="form-control" id="dueDate" placeholder="" value=" ">
           </div>
           <div class="form-group">
-            <span id="error4" > </span><br>
+            
             <label for="description">Task Description</label>
+            <span id="error4" > </span><br>
             <textarea class="form-control" id="description" rows="3"></textarea>
           </div>
           <div class="form-group">
-            <span id="error5" > </span><br>
+            
             <label for="status">Status</label>
+            <span id="error5" > </span><br>
             <select class="form-control" id="status">
               <option id="opt2" disabled selected value="select an option"> select an option  </option>
               <option>To Do</option>
@@ -80,10 +85,6 @@
   </div>
 </div>
 <br> <br> <br> <br>
-
-
-
-
 
 
 <!-- flex starts here -->
@@ -116,53 +117,7 @@
        <!-- bootstrap card code ends -->
   </div>
     <!-- card one ends -->
- 
-  <!-- card two starts -->
-  <div class=carditem>
-      <!-- bootstrap card code starts -->
-      <div class="card" style="width: 100%;">
-      
-        <div class="card-body">
-          <h5 class="card-title">Task Name</h5>
-          <p class="card-text">Description of the task comes here</p>
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Assigned to Lara</li>
-          <li class="list-group-item">Due Date comes here</li>
-          
-        </ul>
-        <div class="card-body">
-            <button type="button">Edit</button>
-            <button type="button">Delete</button>
-        </div>
-      </div>
-         <!-- bootstrap card code ends -->
-  </div>   
-  <!-- card two  ends -->
-  
-  <!-- card three starts -->
-  <div class=carditem>
-    <!-- bootstrap card code starts -->
-    <div class="card" style="width: 100%;">
    
-   <div class="card-body">
-     <h5 class="card-title">Task Name</h5>
-     <p class="card-text">Description of the task comes here</p>
-   </div>
-   <ul class="list-group list-group-flush">
-     <li class="list-group-item">Assigned to Lara</li>
-     <li class="list-group-item">Due Date comes here</li>
-     
-   </ul>
-   <div class="card-body">
-       <button type="button">Edit</button>
-       <button type="button">Delete</button>
-   </div>
- </div>
-    <!-- bootstrap card code ends -->
-</div>
- <!-- card three ends -->
-  
 </div>
 <!-- To do flex Item ends -->
 
@@ -171,114 +126,23 @@
   <div class="itemheading inprog">
   <h4> In Progress </h4>
 </div>
-
-<!-- card one_prog starts -->
-<div class=carditem>
-  <!-- bootstrap card code starts -->
-  <div class="card" style="width: 100%;">
- 
- <div class="card-body">
-   <h5 class="card-title">Task Name</h5>
-   <p class="card-text">Description of the task comes here</p>
- </div>
- <ul class="list-group list-group-flush">
-   <li class="list-group-item">Assigned to Lara</li>
-   <li class="list-group-item">Due Date comes here</li>
-   
- </ul>
- <div class="card-body">
-     <button type="button">Edit</button>
-     <button type="button">Delete</button>
- </div>
-</div>
-  <!-- bootstrap card code ends -->
-</div>
-<!-- card one_prog ends -->
-
-<!-- card two_prog starts -->
-<div class=carditem>
-  <!-- bootstrap card code starts -->
-  <div class="card" style="width: 100%;">
- 
- <div class="card-body">
-   <h5 class="card-title">Task Name</h5>
-   <p class="card-text">Description of the task comes here</p>
- </div>
- <ul class="list-group list-group-flush">
-   <li class="list-group-item">Assigned to Lara</li>
-   <li class="list-group-item">Due Date comes here</li>
-   
- </ul>
- <div class="card-body">
-     <button type="button">Edit</button>
-     <button type="button">Delete</button>
- </div>
-</div>
-  <!-- bootstrap card code ends -->
-</div>
-<!-- card two_prog ends -->
-
 </div>
 <!-- In Progress flex Item ends -->
+
 
 <!-- Review flex Item starts -->
 <div class="item">
   <div class="itemheading rev">
   <h4>Review </h4>
-  </div>
-
-  <!-- card one_prog starts -->
-<div class=carditem>
-  <!-- bootstrap card code starts -->
-  <div class="card" style="width: 100%;">
- 
- <div class="card-body">
-   <h5 class="card-title">Task Name</h5>
-   <p class="card-text">Description of the task comes here</p>
- </div>
- <ul class="list-group list-group-flush">
-   <li class="list-group-item">Assigned to Lara</li>
-   <li class="list-group-item">Due Date comes here</li>
-   
- </ul>
- <div class="card-body">
-     <button type="button">Edit</button>
-     <button type="button">Delete</button>
- </div>
-</div>
-  <!-- bootstrap card code ends -->
-</div>
-<!-- card one_prog ends -->
-
+  </div>  
 </div> <!-- Review flex Item ends -->
+
 
 
 <div class="item"> <!-- Done flex Item starts -->
   <div class="itemheading done">
   <h4>Done </h4>
 </div>
-<!-- card one_prog starts -->
-<div class=carditem>
-  <!-- bootstrap card code starts -->
-  <div class="card" style="width: 100%;">
- 
- <div class="card-body">
-   <h5 class="card-title">Task Name</h5>
-   <p class="card-text">Description of the task comes here</p>
- </div>
- <ul class="list-group list-group-flush">
-   <li class="list-group-item">Assigned to Lara</li>
-   <li class="list-group-item">Due Date comes here</li>
-   
- </ul>
- <div class="card-body">
-     <button type="button">Edit</button>
-     <button type="button">Delete</button>
- </div>
-</div>
-  <!-- bootstrap card code ends -->
-</div>
-<!-- card one_prog ends -->
 </div> <!-- done flex Item ends -->
 </div> <!-- flex ends here -->
 
