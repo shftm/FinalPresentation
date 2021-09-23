@@ -1,3 +1,4 @@
+
 const Ttask = document.querySelector("#taskname");
 const Aasign = document.querySelector("#assignTo");
 const Ddue = document.querySelector("#dueDate");
@@ -37,7 +38,7 @@ function validFormFieldInput() {
 
     }  
     //Check if the Task Due Date input value is not empty.
-     if (Ddue.value === " " ){
+     if (Ddue.value === "" ){
         error3.innerHTML = "Select a date";
         error3.style.color = 'red'
     }
