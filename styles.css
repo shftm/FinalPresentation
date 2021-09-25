@@ -27,14 +27,16 @@
     
 }
 
-h4 {
+h4, h1 {
     
     text-align: center;
   
 }
 
+
+
 .carditem {
-    background-color: rgb(58, 192, 114);
+    /* background-color: rgb(58, 192, 114); */
     width: 90%;
     height: 262px;
     border: 0.1px solid black;
@@ -50,7 +52,7 @@ h4 {
 }
 
 .todo {
-    background-color: rgb(50, 140, 182);
+    background-color: rgb(50, 140, 182); 
 }
 
 .inprog{
@@ -68,4 +70,8 @@ h4 {
     .item {
       flex: 100%;
     }
+  }
+
+  #error1, #error2, #error3, #error4, #error5 {
+      font-size: 0.8em;
   }
