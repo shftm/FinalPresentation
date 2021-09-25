@@ -109,7 +109,7 @@ class TaskManager {
     const tasksHtml = tasksHtmlList.join("\n");
 
     // Set the inner html of the tasksList on the page
-    if(){};
+    // if(){};
     const tasksList = document.querySelector("#taskstodo");
     tasksList.innerHTML = tasksHtml;
 
