@@ -2,6 +2,9 @@
 const taskinstance = new TaskManager(0);
 console.log(taskinstance);
 
+//testing html task
+let taskHtml  = createTaskHtml ('aaa', 'bbb', 'ccc', 'ddd', 'ddd');
+console.log(taskHtml);
 
 // Select the New Task Form
 const form = document.querySelector("#taskform");
@@ -29,8 +32,8 @@ Cchange.addEventListener('click', validFormFieldInput);
 
 function validFormFieldInput() {
 
-    //prevent default action (doubt, what is event here??)
-    // event.preventDefault(); - event should be passed into the brackets (eg-"submit")
+    // prevent default action - event should be passed into the brackets (eg-"submit")
+    //event.preventDefault('submit'); 
 
   
     //Check if the Task Name input value is more than 5 characters.
@@ -100,6 +103,11 @@ function validFormFieldInput() {
         Sstatus.value = "";
     }
    
+
+   //calling render method
+   taskinstance.render();
+
+
     //closing the modal after clicking
     // var myModal = new bootstrap.Modal(document.getElementById('createTaskModal')); // after validation occurs and it is successful, you can now use the variable you defined to call a BootStrap method - this would be inside your successful if statement
 
