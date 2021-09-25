@@ -90,14 +90,17 @@
 
 <!-- flex starts here -->
 <div class="flexcontainer">
-<div class="item" > 
+<div class="item"  > 
   <!-- To do flex Item starts -->
-   <div class="itemheading todo">
+   <div class="itemheading todo" >
      <h4 >To Do </h4>
-   </div>
-  
+   </div> <br>
+   <!-- card bearing tasktodo container starts here -->
+   <div id="taskstodo">
+
   <!-- card one starts -->
-  <div class="carditem" id="taskstodo">
+  
+  <div class="carditem" >
        <!-- bootstrap card code starts -->
        <div class="card" style="width: 100%;">
         <div class="card-header">
@@ -115,16 +118,23 @@
        <!-- bootstrap card code ends -->
   </div>
     <!-- card one ends -->
-   
-</div>
-<!-- To do flex Item ends -->
+  </div>  
+  <!-- card bearing tasktodo container ends here  -->
+
+</div><!-- To do flex Item ends -->
 
 <!-- In Progress flex Item starts -->
 <div class="item">
   <div class="itemheading inprog">
   <h4> In Progress </h4>
+  </div> <br>
+<!-- card bearing inprogress container starts here -->
+<div id="taskinprog"> 
+
 </div>
+<!-- card bearing inprogress container ends here -->
 </div>
+
 <!-- In Progress flex Item ends -->
 
 
@@ -132,7 +142,12 @@
 <div class="item">
   <div class="itemheading rev">
   <h4>Review </h4>
-  </div>  
+  </div> <br>
+  <!-- card bearing review container starts here -->
+<div id="taskreview"> 
+
+</div>
+<!-- card bearing review container ends here --> 
 </div> <!-- Review flex Item ends -->
 
 
@@ -140,8 +155,14 @@
 <div class="item"> <!-- Done flex Item starts -->
   <div class="itemheading done">
   <h4>Done </h4>
+</div> <br>
+<!-- card bearing done container starts here -->
+<div id="taskdone"> 
+
 </div>
+<!-- card bearing done container ends here -->
 </div> <!-- done flex Item ends -->
+
 </div> <!-- flex ends here -->
 
 <!-- our javascript gets linked here  -->

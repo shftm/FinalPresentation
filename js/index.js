@@ -64,8 +64,8 @@ function validFormFieldInput() {
     }
 
     //Check if the Task Description input value is more than 5 characters.
-     if (!Ddes || Ddes.value.length <5) {
-        error4.innerHTML = "Write a description with more than 5 characters";
+     if (!Ddes || Ddes.value.length <5 ) {
+        error4.innerHTML = "Write a description with more than 5 and less than characters";
         error4.style.color = 'red'
     }
     else {
@@ -91,6 +91,7 @@ function validFormFieldInput() {
     }
     //call the method from the class
     taskinstance.addnewTask(Ttask.value, Aasign.value, Ddue.value, Ddes.value,Sstatus.value)
+    
     console.log(taskinstance._tasks);
     
 

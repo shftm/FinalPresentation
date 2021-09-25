@@ -92,7 +92,7 @@ class TaskManager {
        //create an if statement
 
         // Create the task html to store the html of current task
-      const taskHtml = createTaskHtml(
+      let taskHtml = createTaskHtml(
         task.taskkname,
         task.assiggnTo,
         formattedDate,
@@ -109,7 +109,7 @@ class TaskManager {
     const tasksHtml = tasksHtmlList.join("\n");
 
     // Set the inner html of the tasksList on the page
-    if(){};
+    // if(){};
     const tasksList = document.querySelector("#taskstodo");
     tasksList.innerHTML = tasksHtml;
 
