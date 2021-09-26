@@ -110,12 +110,13 @@ class TaskManager {
       } else if(task.stus==="Review"){
         taskReviewList.push(taskHtml);
 
-      
+      }else if(task.stus==="In Progress"){
+        taskInProgressList.push(taskHtml);
+
+      }else if(task.stus==="Done"){
+        taskDoneList.push(taskHtml);
+}
       }
-
-     
-    }
-
     // Create the tasksHtml by joining each item in the tasksHtmlList
     // with a new line in between each item.
     let tasksHtml = taskToDoList.join("\n");
@@ -127,6 +128,18 @@ class TaskManager {
 
     // Set the inner html of the tasksList on the page
     document.querySelector("#taskreview").innerHTML = tasksHtml;
+
+    tasksHtml = taskInProgressList.join("\n");
+
+    // Set the inner html of the tasksList on the page
+    document.querySelector("#taskinprog").innerHTML = tasksHtml;
+
+    tasksHtml = taskDoneList.join("\n");
+
+    // Set the inner html of the tasksList on the page
+    document.querySelector("#taskdone").innerHTML = tasksHtml;
+
+
 
     
       }
