@@ -30,19 +30,24 @@ const error5 = document.querySelector("#error5");
 
 Cchange.addEventListener('click', validFormFieldInput);
 
-Cclose.addEventListener('click', function(){
-    //remove previous error message
-    error1.innerHTML = "";
-    error2.innerHTML = "";
-    error3.innerHTML = "";
-    error4.innerHTML = "";
-    error5.innerHTML = "";
+function resetForm(){
+//remove previous error message
+error1.innerHTML = "";
+error2.innerHTML = "";
+error3.innerHTML = "";
+error4.innerHTML = "";
+error5.innerHTML = "";
 
-    Ttask.value = "";
-    Aasign.value = "";
-    Ddue.value = "";
-    Ddes.value = "";
-    Sstatus.value = "";
+Ttask.value = "";
+Aasign.selectedIndex = 0;
+Ddue.value = "";
+Ddes.value = "";
+Sstatus.selectedIndex = 0;
+}
+
+
+Cclose.addEventListener('click', function(){
+resetForm();
 });
 
 function validFormFieldInput() {
@@ -77,28 +82,28 @@ function validFormFieldInput() {
         hasError = true;
     }
     else {
-
+        error3.innerHTML = "";
     }
 
     //Check if the Task Description input value is more than 5 characters.
-     if (!Ddes || Ddes.value.length <5) {
-        error4.innerHTML = "Write a description with more than 5 characters";
+     if (!Ddes || Ddes.value.length <5 ) {
+        error4.innerHTML = "Write a description with more than 5 and less than characters";
         error4.style.color = 'red'
         hasError = true;
     }
     else {
-
+        error4.innerHTML = "";
     }
 
     //Check if the Task Status input value is not empty.
-     if (Sstatus.value.length > 0) {
+     if (Sstatus.value === "select an option") {
         error5.innerHTML = "Select an option";
         error5.style.color = 'red'
         hasError = true;
     }
     else{
-        //if false focus to the input fields
-
+        
+        error5.innerHTML = "";
 
 
     }
@@ -107,30 +112,22 @@ function validFormFieldInput() {
         return;
     }
 
-    //remove previous error message
-    error1.innerHTML = "";
-    error2.innerHTML = "";
-    error3.innerHTML = "";
-    error4.innerHTML = "";
-    error5.innerHTML = "";
+   
 
     //call the method from the class
     taskinstance.addnewTask(Ttask.value, Aasign.value, Ddue.value, Ddes.value,Sstatus.value)
+    
     console.log(taskinstance._tasks);
     
 
-    //clearing all form field values after submission
-    let clearFields = () => {
-        Ttask.value = "";
-        Aasign.value = "";
-        Ddue.value = "";
-        Ddes.value = "";
-        Sstatus.value = "";
-    }
+    
    
 
    //calling render method
    taskinstance.render();
+
+   //clearing all form field values after submission
+   resetForm();
 
 
     //closing the modal after clicking
