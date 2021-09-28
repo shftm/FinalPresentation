@@ -1,6 +1,9 @@
 // Initialize a new TaskManager with currentId set to 0
 const taskinstance = new TaskManager(0);
 console.log(taskinstance);
+taskinstance.load();
+taskinstance.render();
+
 
 //testing html task
 let taskHtml  = createTaskHtml ('aaa', 'bbb', 'ccc', 'ddd', 'ddd');
@@ -121,15 +124,13 @@ function validFormFieldInput() {
     console.log(taskinstance._tasks);
     
 
-    
-   
-
+     //clearing all form field values after submission
+   resetForm();   
+    taskinstance.save();
    //calling render method
    taskinstance.render();
-
-   //clearing all form field values after submission
-   resetForm();
-
+  
+  
 
     //closing the modal after clicking
     // var myModal = new bootstrap.Modal(document.getElementById('createTaskModal')); // after validation occurs and it is successful, you can now use the variable you defined to call a BootStrap method - this would be inside your successful if statement
@@ -161,9 +162,10 @@ taskList.addEventListener("click", (event) => {
     // Update the task status to 'DONE'
     catchTask.stus = "Done";
  
-
+    taskinstance.save();
     // Render the tasks
     taskinstance.render();
+    
   }
 });
 
@@ -186,6 +188,7 @@ taskListProg.addEventListener("click", (event) => {
     console.log(catchTask);
     // Update the task status to 'DONE'
     catchTask.stus = "Done";
+    taskinstance.save();
  
 
     // Render the tasks
@@ -211,6 +214,7 @@ taskListRev.addEventListener("click", (event) => {
     console.log(catchTask);
     // Update the task status to 'DONE'
     catchTask.stus = "Done";
+    taskinstance.save();
  
 
     // Render the tasks
