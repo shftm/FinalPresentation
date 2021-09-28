@@ -142,3 +142,79 @@ function validFormFieldInput() {
 
 };
 
+// to to flex-------------------------------
+
+const taskList = document.querySelector("#taskstodo");
+// Add an 'onclick' event listener to the Tasks List
+taskList.addEventListener("click", (event) => {
+  // Check if a "Mark As Done" button was clicked
+  if (event.target.classList.contains("done-button")) {
+    const parentTask =
+      event.target.parentElement.parentElement.parentElement;
+      console.log(parentTask);
+    // Get the taskId of the parent Task and turn it into a number.
+    const taskId = Number(parentTask.dataset.taskId);
+    console.log(taskId);
+    // Get the task from the TaskManager using the taskId
+    const catchTask = taskinstance.getTaskById(taskId);
+    console.log(catchTask);
+    // Update the task status to 'DONE'
+    catchTask.stus = "Done";
+ 
+
+    // Render the tasks
+    taskinstance.render();
+  }
+});
+
+// to do flex ends--------------
+
+//inprogress flex starts -----
+const taskListProg = document.querySelector("#taskinprog");
+// Add an 'onclick' event listener to the Tasks List
+taskListProg.addEventListener("click", (event) => {
+  // Check if a "Mark As Done" button was clicked
+  if (event.target.classList.contains("done-button")) {
+    const parentTask =
+      event.target.parentElement.parentElement.parentElement;
+      console.log(parentTask);
+    // Get the taskId of the parent Task and turn it into a number.
+    const taskId = Number(parentTask.dataset.taskId);
+    console.log(taskId);
+    // Get the task from the TaskManager using the taskId
+    const catchTask = taskinstance.getTaskById(taskId);
+    console.log(catchTask);
+    // Update the task status to 'DONE'
+    catchTask.stus = "Done";
+ 
+
+    // Render the tasks
+    taskinstance.render();
+  }
+});
+//inprogress flex ends-----
+
+//review flex starts ------
+const taskListRev = document.querySelector("#taskreview");
+// Add an 'onclick' event listener to the Tasks List
+taskListRev.addEventListener("click", (event) => {
+  // Check if a "Mark As Done" button was clicked
+  if (event.target.classList.contains("done-button")) {
+    const parentTask =
+      event.target.parentElement.parentElement.parentElement;
+      console.log(parentTask);
+    // Get the taskId of the parent Task and turn it into a number.
+    const taskId = Number(parentTask.dataset.taskId);
+    console.log(taskId);
+    // Get the task from the TaskManager using the taskId
+    const catchTask = taskinstance.getTaskById(taskId);
+    console.log(catchTask);
+    // Update the task status to 'DONE'
+    catchTask.stus = "Done";
+ 
+
+    // Render the tasks
+    taskinstance.render();
+  }
+});
+//review flex ends---
