@@ -2,7 +2,7 @@
 
 function createTaskHtml (name, assignedto, duedate, description, status){
    const html = `  <!-- card one starts -->
-  <div class=carditem>
+  <div class=carditem data-task-id="{id}">
        <!-- bootstrap card code starts -->
        <div class="card" style="width: 100%;">
         <div class="card-header">
@@ -15,6 +15,8 @@ function createTaskHtml (name, assignedto, duedate, description, status){
         <div class="card-body">
            <p class="card-text">${description}</p>
            <h5 class="card-title" >${status}</h5>
+           <button type="button" class="btn btn-outline-primary btn-sm
+           ">Markasdone</button>
         </div>
       </div>
        <!-- bootstrap card code ends -->
@@ -102,6 +104,7 @@ class TaskManager {
         formattedDate,
         task.descptn,
         task.stus,
+        task.done,
       );
 
       // Push it to the tasksHtmlList array
