@@ -165,6 +165,17 @@ taskList.addEventListener("click", (event) => {
     taskinstance.save();
     // Render the tasks
     taskinstance.render();
+  }
+    //-delete task
+    
+  if (event.target.classList.contains("delete-button")) {
+    
+    const parentTask =
+      event.target.parentElement.parentElement.parentElement;
+    const taskId = Number(parentTask.dataset.taskId);
+    taskinstance.deleteTask(taskId);    
+    taskinstance.save();
+    taskinstance.render();
     
   }
 });
@@ -194,6 +205,18 @@ taskListProg.addEventListener("click", (event) => {
     // Render the tasks
     taskinstance.render();
   }
+  //-delete task
+    
+  if (event.target.classList.contains("delete-button")) {
+    
+    const parentTask =
+      event.target.parentElement.parentElement.parentElement;
+    const taskId = Number(parentTask.dataset.taskId);
+    taskinstance.deleteTask(taskId);    
+    taskinstance.save();
+    taskinstance.render();
+    
+  }
 });
 //inprogress flex ends-----
 
@@ -220,5 +243,34 @@ taskListRev.addEventListener("click", (event) => {
     // Render the tasks
     taskinstance.render();
   }
+  //-delete task
+    
+  if (event.target.classList.contains("delete-button")) {
+    
+    const parentTask =
+      event.target.parentElement.parentElement.parentElement;
+    const taskId = Number(parentTask.dataset.taskId);
+    taskinstance.deleteTask(taskId);    
+    taskinstance.save();
+    taskinstance.render();
+    
+  }
 });
 //review flex ends---
+
+//done flex item starts here
+const taskListDone = document.querySelector("#taskdone");
+// Add an 'onclick' event listener to the Tasks List
+taskListDone.addEventListener("click", (event) => {    
+  if (event.target.classList.contains("delete-button")) {    
+    const parentTask =
+      event.target.parentElement.parentElement.parentElement;
+    const taskId = Number(parentTask.dataset.taskId);
+    taskinstance.deleteTask(taskId);    
+    taskinstance.save();
+    taskinstance.render();
+    
+  }
+});
+
+// done flex item ends here 
