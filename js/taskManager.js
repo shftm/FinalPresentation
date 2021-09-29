@@ -15,7 +15,7 @@ function createTaskHtml (id, name, assignedto, duedate, description, status){
         <div class="card-body">
            <p class="card-text">${description}</p>
            <h5 class="card-title" >${status}</h5>
-           <button type="button" class="done-button btn btn-outline-primary btn-sm
+           <button type="button" class="done-button btn btn-outline-primary btn-sm ${(status == "Done") ? "d-none" : ""}
            ">Markasdone</button>
            <button type="button" class="delete-button btn btn-outline-primary btn-sm
            ">Delete</button>
