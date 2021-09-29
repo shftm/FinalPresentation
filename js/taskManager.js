@@ -17,6 +17,8 @@ function createTaskHtml (id, name, assignedto, duedate, description, status){
            <h5 class="card-title" >${status}</h5>
            <button type="button" class="done-button btn btn-outline-primary btn-sm
            ">Markasdone</button>
+           <button type="button" class="delete-button btn btn-outline-primary btn-sm
+           ">Delete</button>
         </div>
       </div>
        <!-- bootstrap card code ends -->
@@ -218,6 +220,19 @@ class TaskManager {
           this.currentId = Number(currentId);
         }
 
+      }
+
+      deleteTask(taskId) {
+        
+        const newTasks = [];   
+        
+        for (let i = 0; i < this.tasks.length; i++) {          
+          const task = this.tasks[i];              
+          if (task.id !== taskId) {            
+            newTasks.push(task);
+          }
+        }        
+        this.tasks = newTasks;
       }
 
     };
