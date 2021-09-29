@@ -128,19 +128,7 @@ function validFormFieldInput() {
    resetForm();   
     taskinstance.save();
    //calling render method
-   taskinstance.render();
-  
-  
-
-    //closing the modal after clicking
-    // var myModal = new bootstrap.Modal(document.getElementById('createTaskModal')); // after validation occurs and it is successful, you can now use the variable you defined to call a BootStrap method - this would be inside your successful if statement
-
-
-//     var myModal = new bootstrap.Modal(document.getElementById('createTaskModal')); // after validation occurs and it is successful, you can now use the variable you defined to call a BootStrap method - this would be inside your successful if statement
-//  myModal.hide();
-//     //  myModal.hide();
-
-
+   taskinstance.render();    
 };
 
 // to to flex-------------------------------
@@ -150,8 +138,7 @@ const taskList = document.querySelector("#taskstodo");
 taskList.addEventListener("click", (event) => {
   // Check if a "Mark As Done" button was clicked
   if (event.target.classList.contains("done-button")) {
-    const parentTask =
-      event.target.parentElement.parentElement.parentElement;
+    const parentTask = event.target.parentElement.parentElement.parentElement;
       console.log(parentTask);
     // Get the taskId of the parent Task and turn it into a number.
     const taskId = Number(parentTask.dataset.taskId);
@@ -160,18 +147,15 @@ taskList.addEventListener("click", (event) => {
     const catchTask = taskinstance.getTaskById(taskId);
     console.log(catchTask);
     // Update the task status to 'DONE'
-    catchTask.stus = "Done";
- 
+    catchTask.stus = "Done"; 
     taskinstance.save();
     // Render the tasks
     taskinstance.render();
   }
-    //-delete task
-    
-  if (event.target.classList.contains("delete-button")) {
-    
+  //-delete task    
+  if (event.target.classList.contains("delete-button")) {    
     const parentTask =
-      event.target.parentElement.parentElement.parentElement;
+    event.target.parentElement.parentElement.parentElement;
     const taskId = Number(parentTask.dataset.taskId);
     taskinstance.deleteTask(taskId);    
     taskinstance.save();
@@ -179,7 +163,6 @@ taskList.addEventListener("click", (event) => {
     
   }
 });
-
 // to do flex ends--------------
 
 //inprogress flex starts -----
@@ -188,8 +171,7 @@ const taskListProg = document.querySelector("#taskinprog");
 taskListProg.addEventListener("click", (event) => {
   // Check if a "Mark As Done" button was clicked
   if (event.target.classList.contains("done-button")) {
-    const parentTask =
-      event.target.parentElement.parentElement.parentElement;
+    const parentTask = event.target.parentElement.parentElement.parentElement;
       console.log(parentTask);
     // Get the taskId of the parent Task and turn it into a number.
     const taskId = Number(parentTask.dataset.taskId);
@@ -200,17 +182,14 @@ taskListProg.addEventListener("click", (event) => {
     // Update the task status to 'DONE'
     catchTask.stus = "Done";
     taskinstance.save();
- 
-
     // Render the tasks
     taskinstance.render();
   }
-  //-delete task
-    
-  if (event.target.classList.contains("delete-button")) {
-    
+
+  //-delete task    
+  if (event.target.classList.contains("delete-button")) {    
     const parentTask =
-      event.target.parentElement.parentElement.parentElement;
+    event.target.parentElement.parentElement.parentElement;
     const taskId = Number(parentTask.dataset.taskId);
     taskinstance.deleteTask(taskId);    
     taskinstance.save();
@@ -226,8 +205,7 @@ const taskListRev = document.querySelector("#taskreview");
 taskListRev.addEventListener("click", (event) => {
   // Check if a "Mark As Done" button was clicked
   if (event.target.classList.contains("done-button")) {
-    const parentTask =
-      event.target.parentElement.parentElement.parentElement;
+    const parentTask = event.target.parentElement.parentElement.parentElement;
       console.log(parentTask);
     // Get the taskId of the parent Task and turn it into a number.
     const taskId = Number(parentTask.dataset.taskId);
@@ -238,22 +216,18 @@ taskListRev.addEventListener("click", (event) => {
     // Update the task status to 'DONE'
     catchTask.stus = "Done";
     taskinstance.save();
- 
-
     // Render the tasks
     taskinstance.render();
   }
-  //-delete task
-    
-  if (event.target.classList.contains("delete-button")) {
-    
+
+  //-delete task    
+  if (event.target.classList.contains("delete-button")) {    
     const parentTask =
-      event.target.parentElement.parentElement.parentElement;
+    event.target.parentElement.parentElement.parentElement;
     const taskId = Number(parentTask.dataset.taskId);
     taskinstance.deleteTask(taskId);    
     taskinstance.save();
-    taskinstance.render();
-    
+    taskinstance.render();    
   }
 });
 //review flex ends---
@@ -263,8 +237,7 @@ const taskListDone = document.querySelector("#taskdone");
 // Add an 'onclick' event listener to the Tasks List
 taskListDone.addEventListener("click", (event) => {    
   if (event.target.classList.contains("delete-button")) {    
-    const parentTask =
-      event.target.parentElement.parentElement.parentElement;
+    const parentTask = event.target.parentElement.parentElement.parentElement;
     const taskId = Number(parentTask.dataset.taskId);
     taskinstance.deleteTask(taskId);    
     taskinstance.save();
