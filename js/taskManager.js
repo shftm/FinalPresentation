@@ -42,7 +42,7 @@ function createTaskHtml (id, name, assignedto, duedate, description, status){
 class TaskManager {
     constructor(currentId = 0) {
       this.currentId =currentId;
-      this._tasks = [];
+      this.tasks = [];
      
     }
 
