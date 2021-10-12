@@ -1,7 +1,9 @@
 # TO-DO LIST 
 
+<img src="images/logo.jpg" alt="Our Logo" width="150" height="100" />
+
 Proudly presented to you by S&S
-<img src="" alt="My cool logo"/>
+
 
 ## General Information
 This is a task planner created to store the tasks, sort them and to keep track of their status. We have assigned different sections for different status and a touch of color has increased your expereince with our app more user friendly as well. 
