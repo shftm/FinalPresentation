@@ -1,4 +1,21 @@
+body {
+    background-image: url('images/backg.jpg');
+    
+  }
 
+#ourtitle {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Italianno', cursive;
+    font-size: 100px;
+    color: rgb(64, 71, 83);
+    /* font-weight: bold; */
+}
+
+
+#buttondiv{
+    text-align: center;
+}
 
 .flexcontainer {
     width: 100%;
@@ -10,8 +27,7 @@
 
 .item{
     
-    width: 22%;
-    
+    width: 22%;    
     border: 0.2px solid gray;
     border-radius: 5px;
     
@@ -27,9 +43,14 @@
     
 }
 
-h4, h1 {
+h4 {
     
     text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Italianno', cursive;
+    font-size: 40px;
+    color: rgb(64, 71, 83);
+    font-weight: bold;
   
 }
 
@@ -37,34 +58,55 @@ h4, h1 {
 
 .carditem {
     /* background-color: rgb(58, 192, 114); */
+    /* text-align: center; */
     width: 90%;
-    height: 262px;
-    border: 0.1px solid black;
+    height: 282px;
+    /* border: 0.1px solid black; */
     align-content: space-around;
-    margin-left: 14px;
+    margin-left: 18px;
     border-radius: 5px;
     margin-top: 5px;
-    margin-bottom: 6px;
+    margin-bottom: 2px;
+    padding-left: 8px;
+   /* testing starts */
+   text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+      
+    color: rgb(64, 71, 83);
+    /* font-weight: bold; */
+   /* testing ends */
 }
+
+
+ #taskstodo{
+    /* background-color: aqua;  */
+    padding-left: 5px;
+    width: 90%;
+   
+}  
+
+
+
 
 .card{
     height: 100%;
+    
 }
 
 .todo {
-    background-color: rgb(50, 140, 182); 
+    background-color: rgb(218, 194, 200); 
 }
 
 .inprog{
-    background-color: rgb(27, 163, 187);
+    background-color: rgb(228, 222, 188);
 }
 
 .rev{
-    background-color: rgb(51, 185, 129);
+    background-color: rgb(215, 224, 236);
 }
 
 .done{
-    background-color: rgb(78, 192, 58);
+    background-color: rgb(201, 231, 196);
 }
 @media (max-width: 900px) {
     .item {

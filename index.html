@@ -3,31 +3,30 @@
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
     
-    <!-- Include Jquery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="/resources/demos/style.css">
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <!-- our css -->
     <link href="./styles.css" rel="stylesheet">
 
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Italianno&display=swap" rel="stylesheet">
+
 
     <title>S&S</title>
   </head>
   <body>
-    <h1>To Do List</h1>
+    <h1 id="ourtitle">To Do List</h1><br><br>
 
     <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createTaskModal">
-  Add New Task
-</button>
+<div id="buttondiv">
+  <button type="button" class="btn btn-primary border-2" data-bs-toggle="modal" data-bs-target="#createTaskModal">
+    Add New Task
+  </button>
+</div>
 
 <!-- Modal -->
 <div class="modal fade" id="createTaskModal" tabindex="-1" aria-labelledby="ariaLabel" aria-hidden="true">
@@ -43,45 +42,39 @@
           <div class="form-group" id="taskform">
             
             <label for="taskname" name="tasksname" >Task Name</label>
-            <span id="error1"> </span> <br>
+             <br>
             <input type="text" class="form-control" id="taskname" placeholder="Type your task name here">
+            <span id="error1"> </span>
           </div>
           <div class="form-group">
             
             <label for="assignTo" >Assign To</label>
-            <span id="error2"> </span><br>
+            
             <select class="form-select" id="assignTo">
               <option id="opt1"  disabled selected value="select an option"> select an option  </option>
-              <option value=Person1>Person 1</option>
-              <option value=Person2>Person 2</option>
-              <option value=Person3>Person 3</option>
-              <option value=Person4>Person 4</option>
-              <option value=Person5>Person 5</option>
+              <option value=Principal>Principal</option>
+              <option value=VicePrincipal>Vice Principal</option>
+              <option value=Teacher>Teacher</option>
+              <option value=Students>Students</option>
+              <option value=Administrator>Administrator</option>
             </select>
+            <span id="error2"> </span><br>
           </div>
           <div class="form-group">
             
-            <label for="dueDate" >Due Date</label>
-            <span id="error3" > </span><br>
-            <input type="text" class="form-control" id="dueDate" placeholder="" value=" ">
-            <!-- jquery starts -->
-            <script>
-              $( function() {
-                  $( "#dueDate" ).datepicker();
-                } );
-            </script>
-            <!-- jquery ends -->
+            <label for="dueDate" >Due Date</label>            
+            <input type="date" class="form-control" id="dueDate" placeholder="" value=" ">    
+            <span id="error3" > </span><br>        
           </div>
           <div class="form-group">
             
-            <label for="description">Task Description</label>
-            <span id="error4" > </span><br>
+            <label for="description">Task Description</label>            
             <textarea class="form-control" id="description" rows="3"></textarea>
+            <span id="error4" > </span><br>
           </div>
           <div class="form-group">
             
-            <label for="status">Status</label>
-            <span id="error5" > </span><br>
+            <label for="status">Status</label>            
             <select class="form-select" id="status">
               <option id="opt2" disabled selected value="select an option"> select an option  </option>
               <option value="To Do">To Do</option>
@@ -89,6 +82,7 @@
               <option value="Review">Review</option>
               <option valu="Done">Done</option>
               </select>
+              <span id="error5" > </span><br>
           </div>
         </form>
         <!-- form ends here -->
@@ -154,7 +148,7 @@
 
 <div class="item"> <!-- Done flex Item starts -->
   <div class="itemheading done">
-  <h4>Done </h4>
+  <h4>Done</h4>
 </div> <br>
 <!-- card bearing done container starts here -->
 <div id="taskdone"> 
@@ -164,6 +158,7 @@
 </div> <!-- done flex Item ends -->
 
 </div> <!-- flex ends here -->
+<br> <br>
 <footer> All Rights Reserved © S&S </footer>
 
     <!-- Optional JavaScript; choose one of the two! -->

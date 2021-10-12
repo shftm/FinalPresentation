@@ -62,7 +62,7 @@ function validFormFieldInput() {
   
     //Check if the Task Name input value is more than 5 characters.
     if(Ttask.value.length < 5){
-        error1.innerHTML = "Enter a name with more than 5 charecters";
+        error1.innerHTML = "Please enter a name with more than 5 charecters";
         error1.style.color = 'red';
         hasError = true;
         
@@ -72,7 +72,7 @@ function validFormFieldInput() {
     }
      //Check if the Assigned To value is more than 5 characters.
     if (Aasign.value === "select an option" ){
-        error2.innerHTML = "Select an option from the list";
+        error2.innerHTML = "Please select an option from the list";
         error2.style.color = 'red';
         hasError = true;
     }
@@ -81,7 +81,7 @@ function validFormFieldInput() {
     }
     //Check if the Task Due Date input value is not empty.
      if (Ddue.value === "" ){
-        error3.innerHTML = "Select a date";
+        error3.innerHTML = "Please select a date";
         error3.style.color = 'red'
         hasError = true;
     }
@@ -91,7 +91,7 @@ function validFormFieldInput() {
 
     //Check if the Task Description input value is more than 5 characters.
      if (!Ddes || Ddes.value.length <5 ) {
-        error4.innerHTML = "Write a description with more than 5 and less than characters";
+        error4.innerHTML = "Please write a description with more than 5 characters";
         error4.style.color = 'red'
         hasError = true;
     }
