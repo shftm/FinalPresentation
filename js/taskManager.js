@@ -1,34 +1,40 @@
-
 function createTaskHtml (id, name, assignedto, duedate, description, status){
-   const html = `  <!-- card one starts -->
-  <div class=carditem data-task-id="${id}">
-       <!-- bootstrap card code starts -->
-       <div class="card" style="width: 100%;">
-        <div class="card-header">
-          ${name}
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">${assignedto}</li>
-          <li class="list-group-item">${duedate}</li>
-        </ul>
-        <div class="card-body">
-           <p class="card-text">${description}</p>
-           <h5 class="card-title" >${status}</h5>
-           <button type="button" class="done-button btn btn-outline-primary btn-sm ${(status == "Done") ? "d-none" : ""}
-           ">Markasdone</button>
-           <button type="button" class="delete-button btn btn-outline-primary btn-sm
-           ">Delete</button>
-        </div>
-      </div>
-       <!-- bootstrap card code ends -->
-  </div>
-    <!-- card one ends -->
-  `
+  const html = `  <!-- card one starts -->
+ <div class=carditem data-task-id="${id}">
+      <!-- bootstrap card code starts -->
+      <div class="card 
+      ${(status == "To Do")? "border-danger" :
+      (status == "In Progress")? "border-warning" :
+      (status == "Review")? "border-primary" :
+      "border-success"}" style="width: 100%;">
+       <div class="card-header ${(status == "To Do") ? "text-danger text-center fw-bold" :
+       (status == "In Progress") ? "text-warning text-center fw-bold" :
+       (status == "Review") ? "text-primary text-center fw-bold" :
+       "text-success text-center fw-bold"
+       }">
+         ${name}
+       </div>
+       <ul class="list-group list-group-flush">
+         <li class="list-group-item">${assignedto}</li>
+         <li class="list-group-item">${duedate}</li>
+       </ul>
+       <div class="card-body">
+          <p class="card-text">${description}</p>
+          <h5 class="card-title" >${status}</h5>
+          <button type="button" class=" btn-success done-button btn  btn-sm ${(status == "Done") ? "d-none" : ""}
+          ">Markasdone</button>
+          <button type="button" class="btn-danger delete-button btn  btn-sm
+          ">Delete</button>
+       </div>
+     </div>
+      <!-- bootstrap card code ends -->
+ </div>
+   <!-- card one ends -->
+ `
 
-  return html;  // this gives a card with details in html
+ return html;  // this gives a card with details in html
 
 };
-
 
 // Create the TaskManager class
 class TaskManager {
