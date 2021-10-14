@@ -1,6 +1,6 @@
 # TO-DO LIST 
 
-<img src="images/logo2.png" alt="Our Logo" width="150" height="100" />
+<img src="images/logo2.png" alt="Our Logo" width="135" height="100" />
 
 Proudly presented to you by S&S
 
