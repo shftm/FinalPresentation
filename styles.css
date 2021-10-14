@@ -1,6 +1,13 @@
 body {
-    background-image: url('images/backg.jpg');
+    /* background-image: url('images/img1.jpg'); */
     
+  }
+
+  #ourbutton {
+      border-radius: 12px;
+      background-color: rgb(222, 190, 243);
+      border-color: rgb(222, 190, 243);
+      color: rgb(64, 71, 83);
   }
 
 #ourtitle {
@@ -10,6 +17,7 @@ body {
     font-size: 100px;
     color: rgb(64, 71, 83);
     /* font-weight: bold; */
+    background-image:url('images/img3.jpg') ;
 }
 
 
@@ -96,11 +104,11 @@ h4 {
 }
 
 .todo {
-    background-color: rgb(218, 194, 200); 
+    background-color: rgb(238, 205, 205); 
 }
 
 .inprog{
-    background-color: rgb(228, 222, 188);
+    background-color: rgb(243, 242, 192);
 }
 
 .rev{
@@ -108,7 +116,7 @@ h4 {
 }
 
 .done{
-    background-color: rgb(201, 231, 196);
+    background-color: rgb(206, 241, 189);
 }
 @media (max-width: 900px) {
     .item {
